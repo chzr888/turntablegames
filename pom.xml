@@ -259,14 +259,8 @@
 					<username>${scm.git.username}</username>
 					<password>${scm.git.password}</password>
 					<releaseProfiles>releases</releaseProfiles>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
 				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>update-versions</goal>
-						</goals>
-					</execution>
-				</executions>
 				<dependencies>
 					<dependency>
 						<groupId>org.apache.maven.scm</groupId>
@@ -288,6 +282,8 @@
 					<password>${scm.git.password}</password>
 					<excludes>**/target/**</excludes>
 					<message>Changing the version to reflect the pom versions for the release</message>
+					<basedir>${project.basedir}/../..</basedir>
+					<workingDirectory>${project.basedir}/../..</workingDirectory>
 				</configuration>
 				<dependencies>
 					<dependency>
