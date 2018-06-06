@@ -286,6 +286,8 @@
 					<connectionType>connection</connectionType>
 					<username>${scm.git.username}</username>
 					<password>${scm.git.password}</password>
+					<excludes>**/target/**</excludes>
+					<message>Changing the version to reflect the pom versions for the release</message>
 				</configuration>
 				<dependencies>
 					<dependency>
