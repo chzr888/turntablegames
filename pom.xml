@@ -260,6 +260,13 @@
 					<password>${scm.git.password}</password>
 					<releaseProfiles>releases</releaseProfiles>
 				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>update-versions</goal>
+						</goals>
+					</execution>
+				</executions>
 				<dependencies>
 					<dependency>
 						<groupId>org.apache.maven.scm</groupId>
