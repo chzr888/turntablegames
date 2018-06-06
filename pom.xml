@@ -275,8 +275,6 @@
 					</providerImplementations>
 					<username>${scm.git.username}</username>
 					<password>${scm.git.password}</password>
-					<tagBase>${project.artifactId}-${project.version}</tagBase>
-					<goals>-f pom.xml deploy</goals>
 				</configuration>
 				<dependencies>
 					<dependency>
