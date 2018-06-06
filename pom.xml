@@ -271,7 +271,6 @@
 				</dependencies>
 			</plugin>
 
-			<!--
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-scm-plugin</artifactId>
@@ -283,10 +282,6 @@
 					<connectionType>connection</connectionType>
 					<username>${scm.git.username}</username>
 					<password>${scm.git.password}</password>
-					<excludes>**/target/**</excludes>
-					<message>Changing the version to reflect the pom versions for the release</message>
-					<basedir>${project.basedir}/../..</basedir>
-					<workingDirectory>${project.basedir}/../..</workingDirectory>
 				</configuration>
 				<dependencies>
 					<dependency>
@@ -296,7 +291,6 @@
 					</dependency>
 				</dependencies>
 			</plugin>
-			-->
 
 			<!-- Docker -->
 			<plugin>
