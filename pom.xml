@@ -281,6 +281,7 @@
 					<connectionType>connection</connectionType>
 					<username>${scm.git.username}</username>
 					<password>${scm.git.password}</password>
+					<message>a</message>
 				</configuration>
 				<dependencies>
 					<dependency>
