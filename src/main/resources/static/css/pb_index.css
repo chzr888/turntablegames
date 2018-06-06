@@ -1,0 +1,61 @@
+body {
+    min-height: 606px;
+}
+#main_container
+{
+    background: url(../images/bottom.jpg) no-repeat;
+    background-size: 100% 100%;
+    min-width: 320px;
+    min-height: 606px;
+}
+.plate {
+    background: url(../images/plate.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 8%;
+}
+#plate_holder {
+    min-width: 255px;
+}
+.lottery{
+    /*background: url(../images/lottery.png) no-repeat;*/
+    background-size: 100% 100%;
+    position: relative;
+    top: -57%;
+    left: -2%;
+    margin-left: 10%;
+
+}
+
+.drawBTN {
+    background: url(../images/btn.png) no-repeat;
+    background-size: 100% 100%;
+    margin-top: 25%;
+    border: transparent;
+    outline: none;
+    position: relative;
+    z-index: 999;
+}
+#btn_holder {
+    min-width: 115px;
+    min-height: 115px;
+}
+
+#award {
+    position: relative;
+    left: 35%;
+}
+.award-btn {
+    position: relative;
+    margin-top: 10%;
+}
+#times_left {
+    position: relative;
+    left: 30%;
+    margin-top: 8%;
+    font-size: 12pt;
+    font-weight: 900;
+}
+span {
+    color: rgb(28,132,198);
+}
+

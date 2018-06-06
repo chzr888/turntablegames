@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link th:href="@{/webjars/bootstrap/3.1.1/css/bootstrap.min.css}"  rel="stylesheet">
+    <link th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.css}"  rel="stylesheet">
+    <link th:href="@{/css/animate.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+    <link th:href="@{/css/pb_index.css}" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div id="main_container">
+        <div class="middle-box text-center loginscreen">
+            <div class="plate">
+                <div id="plate_holder">
+                    <button class="drawBTN">
+                        <div id="btn_holder"></div>
+                    </button>
+                    <div class="lottery">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="times_container">
+            <p id="times_left">
+                <span>您还剩下</span><span id="available_draw_times_msg" th:text="${session.user.available_draw_times}"></span><span>次抽奖机会</span>
+            </p>
+        </div>
+        <div id="awardBTN_container">
+            <a th:href="@{pbaward/}+${session.user.id}" id="award"><button class="btn btn-lg btn-success award-btn">我的奖品</button></a>
+        </div>
+    </div>
+
+    <form id="drawForm" method="post" modelAttribute="user" action="/draw">
+        <input type="hidden" id="user_id" name="id" th:value="${session.user.id}">
+        <input type="hidden" id="act_id" name="act_id" th:value="${session.user.act_id}">
+        <input type="hidden" id="available_draw_times" name="available_draw_times" th:value="${session.user.available_draw_times}">
+    </form>
+    <input type="hidden" id="act_status" th:value="${act_status}">
+    <input type="hidden" id="img_path" th:value="${img_path}">
+    <!-- Mainly scripts -->
+    <script th:src="@{/webjars/jquery/1.11.1/jquery.js}"></script>
+    <script th:src="@{/webjars/bootstrap/3.1.1/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/jquery.rotate.js}"></script>
+    <script th:src="@{/js/pb_index.js}"></script>
+</body>
+
+</html>

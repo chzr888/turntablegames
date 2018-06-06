@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Users</title>
+
+    <link th:href="@{/webjars/bootstrap/3.1.1/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.css}" rel="stylesheet">
+    <link th:href="@{/webjars/footable/2.0.3/css/footable.core.css}" rel="stylesheet">
+    <link th:href="@{/css/commons/logout.css}" rel="stylesheet" >
+    <link th:href="@{/css/animate.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+
+        </div>
+            <div class="row wrapper border-bottom white-bg page-heading">
+                <div class="col-lg-10">
+                    <a th:replace="commons/logout::logout_btn"></a>
+                    <h2>管理后台</h2>
+                </div>
+            </div>
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div>
+            <a th:href="@{/recommenderadd/}+${act_id}"><button class="btn btn-sm btn-primary">添加推荐号</button></a>
+            <a th:href="@{/acts}"><button class="btn btn-sm btn-info">返回首页</button></a>
+                <div class="border"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5>推荐号管理</h5>
+
+                        </div>
+                        <div class="ibox-content">
+
+                            <table class="footable table table-stripped toggle-arrow-tiny">
+                                <thead>
+                                <tr>
+                                    <th data-hide="all">ID</th>
+                                    <th data-hide="all">推荐号</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="recommender:${recommenders}">
+                                    <td th:text="${recommender.id}">id</td>
+                                    <td th:text="${recommender.recommender_id}">username</td>
+                                    <td>
+                                        <a th:href="@{/recommender/}+${recommender.id}"><button class="btn btn-sm btn-warning">编辑</button></a>
+                                        <button  th:attr="del_uri = @{/recommender/}+${recommender.id}" class="btn btn-sm btn-danger deleteBTN">删除</button>
+                                    </td>
+
+                                </tr>
+                                </tbody>
+                                <tfoot>
+                                <tr>
+                                    <td colspan="5">
+                                        <ul class="pagination pull-right"></ul>
+                                    </td>
+                                </tr>
+                                </tfoot>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+    <form id="deleteForm" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <input type="hidden" name="act_id" th:value="${act_id}">
+    </form>
+
+
+    <!-- Mainly scripts -->
+    <script type="text/javascript" th:src="@{/webjars/jquery/1.11.1/jquery.js}"></script>
+    <script type="text/javascript" th:src="@{/webjars/bootstrap/3.1.1/js/bootstrap.min.js}"></script>
+    <script>
+        $deleteBTNs = $(".deleteBTN")
+        $deleteForm = $("#deleteForm");
+        $search_group = $("#search_group");
+        $border = $(".border");
+        $search_group.css("width",300);
+        $border.css("height",10);
+        $deleteBTNs.click(function () {
+            var isok = confirm("确定删除吗？");
+            if (isok) {
+                $deleteForm.attr("action",$(this).attr("del_uri")).submit();
+            }
+            return false;
+        });
+    </script>
+
+</body>
+
+</html>

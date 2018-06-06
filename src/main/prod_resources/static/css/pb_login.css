@@ -1,0 +1,40 @@
+#main_container
+{
+    background: url("../images/pb_login.jpg");
+    background-size: 100% 100%;
+    min-width: 320px;
+    min-height: 485px;
+}
+
+#loginForm {
+    margin-top: 101%;
+    margin-left: 32%;
+}
+
+#username {
+    margin-left: 5%;
+}
+
+#password {
+    position: relative;
+    margin-top: 4%;
+    margin-left: 5%;
+}
+#submitBTN {
+    background: url("../images/login_btn.png");
+    background-size: 100% 100%;
+    margin-top: 10%;
+    margin-left: -40%;
+    border-bottom: transparent;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    outline: none;
+}
+#button_holder {
+
+    min-width: 160px;
+    min-height: 50px;
+}
+
+

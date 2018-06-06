@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>info</title>
+
+    <link th:href="@{/webjars/bootstrap/3.1.1/css/bootstrap.min.css}"  rel="stylesheet">
+    <link th:href="@{/webjars/font-awesome/4.7.0/css/font-awesome.css}"  rel="stylesheet">
+    <link th:href="@{/css/awardInfo.css}" rel="stylesheet">
+    <link th:href="@{/css/animate.css}" rel="stylesheet">
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+    <div id="main_container">
+    </div>
+    <div class="info_body" th:each="awardInfo:${awardInfos}">
+            <span class="info_area" th:text="${awardInfo.reward_name}"></span>
+            <button class="cashingBTN" th:attr="put_uri=@{/pbaward/}+${awardInfo.id}" th:if="${awardInfo.is_Cash == 0}">可兑换</button>
+    </div>
+    <input type="hidden" id="wrong_recommender" th:if="${#httpServletRequest.getParameter('flag')!=null}">
+    <form id="cashingForm" method="post" modelAttribute="recommender">
+        <input type="hidden" name="_method" value="put">
+        <input type="hidden" id="recommender_id" name="recommender_id">
+        <input type="hidden" id="user_id" name="user_id" th:value="${user_id}">
+        <input type="hidden" name="act_id" th:value="${act_id}">
+    </form>
+    <div id="info_footer">
+
+    </div>
+    <!-- Mainly scripts -->
+    <script th:src="@{/webjars/jquery/1.11.1/jquery.js}"></script>
+    <script th:src="@{/webjars/bootstrap/3.1.1/js/bootstrap.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/pb_awardInfo_list.js}"></script>
+</body>
+
+</html>
