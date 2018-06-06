@@ -259,13 +259,6 @@
 					<arguments>-DskipTests</arguments>
 					<providerImplementations><git>jgit</git></providerImplementations>
 				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>perform</goal>
-						</goals>
-					</execution>
-				</executions>
 				<dependencies>
 					<dependency>
 						<groupId>org.apache.maven.scm</groupId>
