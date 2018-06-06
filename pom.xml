@@ -275,6 +275,7 @@
 					<providerImplementations>
 						<git>jgit</git>
 					</providerImplementations>
+					<connectionType>connection</connectionType>
 					<username>${scm.git.username}</username>
 					<password>${scm.git.password}</password>
 				</configuration>
