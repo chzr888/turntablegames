@@ -260,6 +260,7 @@
 					<password>${scm.git.password}</password>
 					<releaseProfiles>releases</releaseProfiles>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<connectionUrl>scm:git:https://github.com/chzr888/turntablegames.git</connectionUrl>
 				</configuration>
 				<dependencies>
 					<dependency>
