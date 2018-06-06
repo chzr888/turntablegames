@@ -256,6 +256,8 @@
 					<providerImplementations>
 						<git>jgit</git>
 					</providerImplementations>
+					<username>${scm.git.username}</username>
+					<password>${scm.git.password}</password>
 				</configuration>
 				<dependencies>
 					<dependency>
