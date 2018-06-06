@@ -258,6 +258,7 @@
 					</providerImplementations>
 					<username>${scm.git.username}</username>
 					<password>${scm.git.password}</password>
+					<releaseProfiles>releases</releaseProfiles>
 				</configuration>
 				<dependencies>
 					<dependency>
