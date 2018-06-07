@@ -259,15 +259,7 @@
 					<password>${scm.git.password}</password>
 					<releaseProfiles>releases</releaseProfiles>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<tagNameFormat>${project.version}</tagNameFormat>
 				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>deploy</goal>
-						</goals>
-					</execution>
-				</executions>
 				<dependencies>
 					<dependency>
 						<groupId>org.apache.maven.scm</groupId>
