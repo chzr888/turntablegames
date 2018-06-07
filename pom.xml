@@ -4,7 +4,7 @@
 
 	<groupId>com.yukoon</groupId>
 	<artifactId>turntablegames</artifactId>
-	<version>0.0.16-SNAPSHOT</version>
+	<version>0.0.16</version>
 	<packaging>jar</packaging>
 
 	<name>turntablegames</name>
@@ -333,7 +333,7 @@
 		<url>https://github.com/chzr888/turntablegames.git</url>
 		<connection>scm:git:https://github.com/chzr888/turntablegames.git</connection>
 		<developerConnection>scm:git:https://github.com/chzr888/turntablegames.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>0.0.16-SNAPSHOT</tag>
 	</scm>
 
 	<distributionManagement>
