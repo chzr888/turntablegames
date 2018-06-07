@@ -289,7 +289,6 @@
 					<username>${scm.git.username}</username>
 					<password>${scm.git.password}</password>
 					<message>a</message>
-                    <tag>${project.version}</tag>
 				</configuration>
 				<dependencies>
 					<dependency>
