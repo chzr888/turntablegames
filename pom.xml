@@ -259,6 +259,7 @@
 					<password>${scm.git.password}</password>
 					<releaseProfiles>releases</releaseProfiles>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<tagNameFormat>@{project.version}</tagNameFormat>
 				</configuration>
 				<dependencies>
 					<dependency>
