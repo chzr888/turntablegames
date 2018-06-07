@@ -264,7 +264,7 @@
 				<executions>
 					<execution>
 						<goals>
-							<goal>update-versions</goal>
+							<goal>deploy</goal>
 						</goals>
 					</execution>
 				</executions>
