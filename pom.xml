@@ -281,6 +281,7 @@
 					<username>${scm.git.username}</username>
 					<password>${scm.git.password}</password>
 					<message>a</message>
+                    <tag>${parent.version}</tag>
 				</configuration>
 				<dependencies>
 					<dependency>
